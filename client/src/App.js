@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Route, Switch, Link} from 'react-router-dom';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import About from './components/About/About';
 import Pricing from './components/Pricing';
 import Register from './components/Register';
@@ -11,6 +11,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div className="container">
         <Link to="/"><p>Home</p></Link>
         <Link to="/about"><p>About</p></Link>
         <Link to="/pricing"><p>Pricing</p></Link>
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
         </Switch> 
+        </div>
       </div>
     );
   }
