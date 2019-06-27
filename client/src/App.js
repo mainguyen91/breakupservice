@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import {Route, Switch, Link} from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About/About';
 import Pricing from './components/Pricing';
@@ -8,6 +8,11 @@ import Register from './components/Register';
 import Login from './components/Login';
 
 class App extends Component {
+
+  addUser = formState => {
+    this.setState({ users: [...this.state.users, formState] })
+  }
+
   render() {
     return (
       <div>
@@ -22,7 +27,8 @@ class App extends Component {
           <Route path="/pricing" component={Pricing} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
-        </Switch> 
+        </Switch>
+
       </div>
     );
   }

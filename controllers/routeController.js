@@ -9,6 +9,7 @@ module.exports = {
     },
     postNewProfile: (req, res) => {
         let newProfile = req.body;
+        console.log(req.body);
         Profile.create({ name: newProfile.name, email: newProfile.email, password: newProfile.password })
             .then(results => {
                 res.send(results.dataValues) //sending to client

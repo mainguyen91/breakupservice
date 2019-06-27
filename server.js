@@ -10,7 +10,7 @@ const {
 } = require("./controllers/routeController");
 
 const { connector } = require('./database/configuration/dbConfig');
-
+app.use(express.json());
 
 app.get("/", getHomePage);
 app.post("/profile", postNewProfile);
