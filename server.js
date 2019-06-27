@@ -5,7 +5,7 @@ const {
     getHomePage,
     getRegistrationPage,
     postNewProfile,
-    
+    loggedUser,
     postNewOrder
 } = require("./controllers/routeController");
 const { connector } = require('./database/configuration/dbConfig');
@@ -38,11 +38,12 @@ app.get("/register", isUserLoggedIn, getRegistrationPage);
 app.post("/register", postNewProfile);
 
 
+app.post("/login", loggedUser);
 
 
 
 app.post("/profile/newOrder", postNewOrder);
 
-connector.sync({ force: true })
+connector.sync()
     .then(() => { app.listen(port, () => console.log(`Got ears on port ${port}`)) })
     .catch(error => console.error(`Could not sync connector with server ${error.stack}`))
