@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Order from './components/Order';
 import Price10 from './components/Price10';
 import Price30 from './components/Price30'
+import Profile from './components/Profile';
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/register" component={Register} />
+          <Route path="/profile" component={Profile} />
           <Route path="/login" component={Login} />
           <Route path="/profile/newOrder" component={Order} />
           <Route path="/order/email" component={Price10} />

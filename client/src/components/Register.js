@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 class Register extends Component {
     constructor(props) {
@@ -7,7 +8,8 @@ class Register extends Component {
         this.state = {
             name: "",
             email: "",
-            password: ""
+            password: "",
+            redirect: false
         }
     }
     handleChange = e => {
@@ -23,20 +25,26 @@ class Register extends Component {
             password: this.state.password
         }
         axios
-            .post('profile', user)
+            .post('register', user)
             .then(results => {
                 //set state for Form.js with results from the server to be sent to App.js (React)
                 this.setState({
                     id: results.data.id,
                     name: results.data.name,
                     email: results.data.email,
-                    password: results.data.password
+                    password: results.data.password,
+                    redirect: true
                 })
+
             })
             .catch(error => console.error(`Something went wrong when posting user ${error.stack}`))
+
+
     }
+
     render() {
-        return (
+        if (this.state.redirect) return <Redirect to="/profile" />
+        else return (
             <div>
                 <h1>Register Form</h1>
                 <form onSubmit={this.handleSubmit}>
