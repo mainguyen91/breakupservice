@@ -18,12 +18,15 @@ module.exports = {
     },
     postNewOrder: (req, res) => {
         let newOrder = req.body;
-        Order.create({ nameClient: newOrder.nameClient, nameSo: newOrder.nameSo, service: newOrder.service, contactSo: newOrder.contactSo, situation: newOrder.situation, message: newOrder.message, orderExecuted: newOrder.orderExecuted })
+        Order.create({ nameClient: newOrder.nameClient, nameSo: newOrder.nameSo, service: newOrder.service, contactSo: newOrder.contactSo, situation: newOrder.situation, message: newOrder.message, orderExecuted: newOrder.orderExecuted, clientId: req.session.user.id })
             .then(results => {
                 console.log(results)
                 res.send(results.dataValues) //sending to client
             })
             .catch(error => console.error(`Could not save user ${error.stack}`))
 
+    },
+    viewOrder: (req, res) => {
+        Order.findAll
     }
 }

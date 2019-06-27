@@ -15,6 +15,7 @@ app.use(express.json());
 app.get("/", getHomePage);
 app.post("/profile", postNewProfile);
 app.post("/profile/newOrder", postNewOrder);
+app.get("/overview", viewOrder)
 
 connector.sync({ force: true })
     .then(() => { app.listen(port, () => console.log(`Got ears on port ${port}`)) })
