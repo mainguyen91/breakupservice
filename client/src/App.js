@@ -6,12 +6,9 @@ import About from './components/About/About';
 import Pricing from './components/Pricing';
 import Register from './components/Register';
 import Login from './components/Login';
+import Profile from './components/Profile';
 
 class App extends Component {
-
-  addUser = formState => {
-    this.setState({ users: [...this.state.users, formState] })
-  }
 
   render() {
     return (
@@ -26,6 +23,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/register" component={Register} />
+          <Route path="/profile" component={Profile} />
           <Route path="/login" component={Login} />
         </Switch>
 
