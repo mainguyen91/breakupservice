@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "app": "concurrently -kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
