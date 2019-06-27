@@ -20,6 +20,7 @@ module.exports = {
         let newOrder = req.body;
         Order.create({ nameClient: newOrder.nameClient, nameSo: newOrder.nameSo, service: newOrder.service, contactSo: newOrder.contactSo, situation: newOrder.situation, message: newOrder.message, orderExecuted: newOrder.orderExecuted })
             .then(results => {
+                console.log(results)
                 res.send(results.dataValues) //sending to client
             })
             .catch(error => console.error(`Could not save user ${error.stack}`))

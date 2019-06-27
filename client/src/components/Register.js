@@ -32,8 +32,6 @@ class Register extends Component {
                     email: results.data.email,
                     password: results.data.password
                 })
-                //addUser that is passed down from App.js (React) for updating the state of App.js
-                this.props.addUser(this.state)
             })
             .catch(error => console.error(`Something went wrong when posting user ${error.stack}`))
     }
