@@ -37,7 +37,9 @@ app.get("/", isUserLoggedIn, getHomePage);
 app.get("/register", isUserLoggedIn, getRegistrationPage);
 app.post("/register", postNewProfile);
 
-//app.get("/profile", getProfilePage);
+
+
+
 
 app.post("/profile/newOrder", postNewOrder);
 
