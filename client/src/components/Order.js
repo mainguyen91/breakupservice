@@ -46,7 +46,7 @@ class Order extends Component {
                     redirect: true
                 })
             })
-            .catch(error => console.error(`Something went wrong when posting user ${error.stack}`))
+            .catch(error => console.error(`Something went wrong when posting order ${error.stack}`))
     }
     render() {
         if (this.state.redirect && this.state.service === 'email') return <Redirect to='/order/email' />

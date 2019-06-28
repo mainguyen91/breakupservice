@@ -6,7 +6,7 @@ const {
     getRegistrationPage,
     postNewProfile,
     loggedUser,
-    postNewOrder
+    postNewOrder, viewOrder
 } = require("./controllers/routeController");
 const { connector } = require('./database/configuration/dbConfig');
 const cookieParser = require("cookie-parser");
@@ -16,16 +16,16 @@ const morgan = require("morgan");
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
-    name: process.env.SESSION_COOKIE,    
-    secret: process.env.SESSION_SECRET,    
-    resave: false,    
+    name: process.env.SESSION_COOKIE,
+    secret: process.env.SESSION_SECRET,
+    resave: false,
     saveUninitialized: false
-    })
+})
 );
 app.use(morgan("dev"));
 
 let isUserLoggedIn = (req, res, next) => {
-    if(req.session.user && req.cookies.authCookie) {
+    if (req.session.user && req.cookies.authCookie) {
         res.redirect("/profile")
     } else {
         next();

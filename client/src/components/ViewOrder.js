@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import axios from 'axios';
 export default class Pricing extends Component {
     constructor(props) {
         super(props);
@@ -7,7 +7,15 @@ export default class Pricing extends Component {
             orders: {}
         }
     }
-    componentDidMount()
+    componentDidMount() {
+        axios
+            .get('/overview')
+            .then(resultsFromServer => {
+                console.log(resultsFromServer.data)
+                this.setState({ users: resultsFromServer.data })
+            })
+            .catch(error => console.error(`Something went wrong when component mounted ${error.stack}`))
+    }
     render() {
         return (
             <div>
