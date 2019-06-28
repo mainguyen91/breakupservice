@@ -4,7 +4,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div class="logo">
+                <div className="logo">
                     <h1>BreakUp</h1>
                 </div>
                 <h1>Welcome to Breakup Service, your break up facilitator</h1>
