@@ -30,17 +30,12 @@ class App extends Component {
           <Route path="/register" component={Register} />
           <Route path="/profile" component={Order} />
           <Route path="/login" component={Login} />
-<<<<<<< HEAD
-        </Switch> 
-        </div>
-=======
 
           <Route path="/order/email" component={Price10} />
           <Route path="/order/phone" component={Price30} />
 
         </Switch>
-
->>>>>>> register
+      </div>
       </div>
     );
   }
