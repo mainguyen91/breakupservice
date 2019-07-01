@@ -6,7 +6,8 @@ const {
     getRegistrationPage,
     postNewProfile,
     loggedUser,
-    postNewOrder, viewOrder
+    postNewOrder,
+    getOrderFromDb
 } = require("./controllers/routeController");
 const { connector } = require('./database/configuration/dbConfig');
 const cookieParser = require("cookie-parser");
@@ -42,8 +43,8 @@ app.post("/login", loggedUser);
 
 
 
-app.post("/profile/newOrder", postNewOrder);
-app.get("/overview", viewOrder)
+app.post("/newOrder", postNewOrder);
+app.get("/overview", getOrderFromDb)
 
 connector.sync()
     .then(() => { app.listen(port, () => console.log(`Got ears on port ${port}`)) })

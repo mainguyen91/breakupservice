@@ -56,16 +56,31 @@ module.exports = {
     },
     postNewOrder: (req, res) => {
         let newOrder = req.body;
-        console.log(req.session)
+
         Order.create({ nameClient: newOrder.nameClient, nameSo: newOrder.nameSo, service: newOrder.service, contactSo: newOrder.contactSo, situation: newOrder.situation, message: newOrder.message, orderExecuted: newOrder.orderExecuted, profileId: req.session.user.id })
             .then(results => {
-                console.log(results)
-                res.send(results.dataValues) //sending to client
+                console.log(results.dataValues)
+                res.send(results.dataValues)
             })
             .catch(error => console.error(`Could not save user ${error.stack}`))
 
     },
-    viewOrder: (req, res) => {
-        Order.findAll
+    getOrderFromDb: (req, res) => {
+        Order.findAll({
+            limit: 1,
+            where: { profileId: req.session.user.id },
+            order: [['createdAt', 'DESC']]
+        })
+            .then(allOrder => {
+                res.send(allOrder[0].dataValues)
+                // let order = allOrder.map(orderElement => {
+                //     return {
+                //         nameClient: orderElement.dataValues.nameClient,
+                //         nameSo: orderElement.dataValues.nameSo
+                //     }
+                // })
+                //res.send(order)
+            })
+            .catch(error => console.error(`Something went wrong when finding order ${error.stack}`))
     }
 }

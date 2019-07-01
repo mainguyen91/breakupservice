@@ -9,7 +9,7 @@ import Login from './components/Login';
 import Order from './components/Order';
 import Price10 from './components/Price10';
 import Price30 from './components/Price30'
-
+import ViewOrder from './components/ViewOrder';
 
 class App extends Component {
 
@@ -32,7 +32,7 @@ class App extends Component {
 
           <Route path="/order/email" component={Price10} />
           <Route path="/order/phone" component={Price30} />
-
+          <Route path="/overview" component={ViewOrder} />
         </Switch>
 
       </div>
