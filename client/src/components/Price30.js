@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-
+import ViewOrder from './ViewOrder';
+import OrderSuccess from './OrderSuccess';
+import { Route, Switch, Link } from 'react-router-dom';
 
 export default class Pricing extends Component {
 
     render() {
         return (
             <div>
-
-                <h1>Please pay 30 euro</h1>
+                <ViewOrder orders={this.orders} />
+                <Link to="/ordersuccess"><p>Pay 30 euro</p></Link>
+                <Switch>
+                    <Route path="/ordersuccess" component={OrderSuccess} />
+                </Switch>
             </div>
         )
     }

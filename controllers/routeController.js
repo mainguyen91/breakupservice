@@ -49,17 +49,14 @@ module.exports = {
     },
     postNewOrder: (req, res) => {
         let newOrder = req.body;
-        console.log(req.session)
+
         Order.create({ nameClient: newOrder.nameClient, nameSo: newOrder.nameSo, service: newOrder.service, contactSo: newOrder.contactSo, situation: newOrder.situation, message: newOrder.message, orderExecuted: newOrder.orderExecuted, profileId: req.session.user.id })
             .then(results => {
-                console.log(results)
-                res.send(results.dataValues) //sending to client
+                console.log(results.dataValues)
+                res.send(results.dataValues)
             })
             .catch(error => console.error(`Could not save user ${error.stack}`))
 
-    },
-    viewOrder: (req, res) => {
-        Order.findAll
     },
     logoutFunction: (req, res) => {
         if(req.session.user && req.cookies.userCookie) {
@@ -72,5 +69,36 @@ module.exports = {
         } else {
             console.log("No user logged")
         }
+    },
+    getOrderFromDb: (req, res) => {
+        Order.findAll({
+            limit: 1,
+            where: { profileId: req.session.user.id },
+            order: [['createdAt', 'DESC']]
+        })
+            .then(allOrder => {
+                //console.log(allOrder)
+                res.send(allOrder[0].dataValues)
+            })
+            .catch(error => console.error(`Something went wrong when finding order ${error.stack}`))
+    },
+    getAllOrders: (req, res) => {
+        Order.findAll({
+            where: { profileId: req.session.user.id }
+        })
+            .then(allOrder => {
+                console.log(allOrder)
+                let results = allOrder.map(order => {
+                    return {
+                        id: order.dataValues.id,
+                        nameClient: order.dataValues.nameClient,
+                        nameSo: order.dataValues.nameSo,
+                        service: order.dataValues.service,
+                        contactSo: order.dataValues.contactSo
+                    }
+                })
+                res.send(results)
+            })
+            .catch(error => console.error(`Something went wrong when finding order ${error.stack}`))
     }
 }

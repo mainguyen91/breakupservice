@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-import LogoutNavbar from '../components/LogoutNavbar/LogoutNavbar';
+import LoggedNavbar from './LoggedNavbar/LoggedNavbar';
 
 class Order extends Component {
     constructor(props) {
@@ -22,7 +22,7 @@ class Order extends Component {
 
     //function that listens for the submit event on form
     handleSubmit = e => {
-        e.preventDefault()
+        e.preventDefault();
         const order = {
             nameClient: this.state.nameClient,
             nameSo: this.state.nameSo,
@@ -32,7 +32,7 @@ class Order extends Component {
             message: this.state.message
         }
         axios
-            .post('profile/newOrder', order)
+            .post('/newOrder', order)
             .then(results => {
                 console.log(results)
                 //set state for Form.js with results from the server to be sent to App.js (React)
@@ -55,7 +55,7 @@ class Order extends Component {
         else
             return (
                 <div>
-                    <LogoutNavbar />
+                    <LoggedNavbar />
                     <h1>Order Form</h1>
                     <form onSubmit={this.handleSubmit}>
                         <div>
@@ -93,8 +93,8 @@ class Order extends Component {
                                 required
                             >
                                 <option>Please select</option>
-                                <option value="email">Email</option>
-                                <option value="phone">Phone</option>
+                                <option value="email">Email 10 euro</option>
+                                <option value="phone">Phone 30 euro</option>
                             </select>
                         </div>
                         <div>

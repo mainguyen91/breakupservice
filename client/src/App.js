@@ -11,6 +11,8 @@ import Price10 from './components/Price10';
 import Price30 from './components/Price30'
 import Logout from './components/Logout/Logout';
 import ViewOrder from './components/ViewOrder';
+import AllOrders from './components/AllOrders';
+import OrderSuccess from './components/OrderSuccess';
 
 class App extends Component {
 
@@ -28,6 +30,8 @@ class App extends Component {
           <Route path="/order/phone" component={Price30} />
           <Route path="/overview" component={ViewOrder} />
           <Route path="/logout" component={Logout} />
+          <Route path="/viewallorders" component={AllOrders} />
+          <Route path="/ordersuccess" component={OrderSuccess} />
         </Switch>
       </div>
     );

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../Navbar/Navbar.css'
 
-export default class LogoutNavbar extends Component {
+export default class LoggedNavbar extends Component {
 
     render() {
         return (

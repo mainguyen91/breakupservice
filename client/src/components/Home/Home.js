@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../Home/Home.css';
 import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
-import LogoutNavBar from '../LogoutNavbar/LogoutNavbar';
+import LoggedNavbar from '../LoggedNavbar/LoggedNavbar';
 import couple from '../../public/img/couple.jpg';
 import thunder from '../../public/img/thunder.png';
 
@@ -26,7 +26,7 @@ class Home extends Component {
         if (this.state.loggedIn === true) {
         return (
             <div>
-                <LogoutNavBar /> 
+                <LoggedNavbar /> 
                 <img className="hero" src={couple} alt="Couple"
                 />
                 <div className="hero-text">
