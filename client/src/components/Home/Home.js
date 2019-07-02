@@ -15,8 +15,9 @@ class Home extends Component {
     }
 
     componentDidMount(){
-        axios.get('/')
+        axios.get('/home')
         .then(results => {
+            console.log(results)
             this.setState( { loggedIn: results.data})
         })
     }
@@ -35,7 +36,8 @@ class Home extends Component {
                 </div>
                 <img className="icon" src={thunder} alt="Lightening" />
             </div>  
-        )} else return (
+        )} else { 
+            return (
             <div>
                 <Navbar />
                 <img className="hero" src={couple} alt="Couple"
@@ -48,6 +50,7 @@ class Home extends Component {
                 <img className="icon" src={thunder} alt="Lightening" />
             </div>
         )
+        }
     }
 }
 

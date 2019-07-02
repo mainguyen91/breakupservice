@@ -4,9 +4,6 @@ const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
 
 module.exports = {
-    getRegistrationPage: (req, res) => {
-        res.render("/register");
-    },
     postNewProfile: (req, res) => {
         const errors = validationResult(req)
 
@@ -64,12 +61,16 @@ module.exports = {
     viewOrder: (req, res) => {
         Order.findAll
     },
-    logout: (req, res) => {
+    logoutFunction: (req, res) => {
         if(req.session.user && req.cookies.userCookie) {
             res.clearCookie("userCookie");
-            res.redirect("/");
+            if(!req.cookies.userCookie){
+                res.send(false)
+            } else {
+                res.send(true)
+            }
         } else {
-            res.redirect("login");
+            console.log("No user logged")
         }
     }
 }

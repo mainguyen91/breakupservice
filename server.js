@@ -6,7 +6,7 @@ const {
     loggedUser,
     postNewOrder, 
     viewOrder,
-    logout
+    logoutFunction
 } = require("./controllers/routeController");
 const { connector } = require('./database/configuration/dbConfig');
 const cookieParser = require("cookie-parser");
@@ -32,11 +32,9 @@ function checkCookies(req, res) {
     }
 }
 
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
     checkCookies(req, res)
 });
-
-// app.get("/register", isUserLoggedIn, getRegistrationPage);
 
 app.post("/register", postNewProfile);
 
@@ -46,7 +44,7 @@ app.post("/login", loggedUser);
 app.post("/newOrder", postNewOrder);
 app.get("/overview", viewOrder);
 
-app.get("/", logout);
+app.get("/logout", logoutFunction);
 
 connector.sync()
     .then(() => { app.listen(port, () => console.log(`Got ears on port ${port}`)) })

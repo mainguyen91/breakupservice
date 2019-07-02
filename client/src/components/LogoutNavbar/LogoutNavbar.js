@@ -9,6 +9,8 @@ export default class LogoutNavbar extends Component {
             <div className="container">
                 <ul className="nav">
                     <Link to="/"><li>Home</li></Link>
+                    <Link to="/loggedhome"><li>Place order</li></Link>
+                    <Link to="/viewallorders"><li>View order</li></Link>
                     <Link to="/logout" ><li>Log out</li></Link>
                 </ul>
             </div>
