@@ -10,6 +10,8 @@ import Order from './components/Order';
 import Price10 from './components/Price10';
 import Price30 from './components/Price30'
 import ViewOrder from './components/ViewOrder';
+import AllOrders from './components/AllOrders';
+import OrderSuccess from './components/OrderSuccess';
 
 class App extends Component {
 
@@ -21,6 +23,7 @@ class App extends Component {
         <Link to="/pricing"><p>Pricing</p></Link>
         <Link to="/register"><p>Register</p></Link>
         <Link to="/login"><p>Log in</p></Link>
+        <Link to="/viewallorders"><p>View All Orders</p></Link>
 
         <Switch>
           <Route exact path="/" component={Home} />
@@ -33,6 +36,8 @@ class App extends Component {
           <Route path="/order/email" component={Price10} />
           <Route path="/order/phone" component={Price30} />
           <Route path="/overview" component={ViewOrder} />
+          <Route path="/viewallorders" component={AllOrders} />
+          <Route path="/ordersuccess" component={OrderSuccess} />
         </Switch>
 
       </div>

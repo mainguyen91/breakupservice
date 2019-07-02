@@ -72,14 +72,27 @@ module.exports = {
             order: [['createdAt', 'DESC']]
         })
             .then(allOrder => {
+                //console.log(allOrder)
                 res.send(allOrder[0].dataValues)
-                // let order = allOrder.map(orderElement => {
-                //     return {
-                //         nameClient: orderElement.dataValues.nameClient,
-                //         nameSo: orderElement.dataValues.nameSo
-                //     }
-                // })
-                //res.send(order)
+            })
+            .catch(error => console.error(`Something went wrong when finding order ${error.stack}`))
+    },
+    getAllOrders: (req, res) => {
+        Order.findAll({
+            where: { profileId: req.session.user.id }
+        })
+            .then(allOrder => {
+                console.log(allOrder)
+                let results = allOrder.map(order => {
+                    return {
+                        id: order.dataValues.id,
+                        nameClient: order.dataValues.nameClient,
+                        nameSo: order.dataValues.nameSo,
+                        service: order.dataValues.service,
+                        contactSo: order.dataValues.contactSo
+                    }
+                })
+                res.send(results)
             })
             .catch(error => console.error(`Something went wrong when finding order ${error.stack}`))
     }

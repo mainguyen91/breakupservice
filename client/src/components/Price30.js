@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ViewOrder from './ViewOrder'
+import ViewOrder from './ViewOrder';
+import OrderSuccess from './OrderSuccess';
+import { Route, Switch, Link } from 'react-router-dom';
 
 export default class Pricing extends Component {
 
@@ -7,7 +9,10 @@ export default class Pricing extends Component {
         return (
             <div>
                 <ViewOrder orders={this.orders} />
-                <h1>Please pay 30 euro</h1>
+                <Link to="/ordersuccess"><p>Pay 30 euro</p></Link>
+                <Switch>
+                    <Route path="/ordersuccess" component={OrderSuccess} />
+                </Switch>
             </div>
         )
     }
