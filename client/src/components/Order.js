@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import LogoutNavbar from '../components/LogoutNavbar/LogoutNavbar';
 
 class Order extends Component {
     constructor(props) {
@@ -54,6 +55,7 @@ class Order extends Component {
         else
             return (
                 <div>
+                    <LogoutNavbar />
                     <h1>Order Form</h1>
                     <form onSubmit={this.handleSubmit}>
                         <div>

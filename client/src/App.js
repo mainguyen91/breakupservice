@@ -9,15 +9,13 @@ import Login from './components/Login';
 import Order from './components/Order';
 import Price10 from './components/Price10';
 import Price30 from './components/Price30'
-import Navbar from './components/Navbar/Navbar';
-
+import Logout from './components/Logout/Logout';
 
 class App extends Component {
 
   render() {
     return (
       <div>
-        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
@@ -27,7 +25,7 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/order/email" component={Price10} />
           <Route path="/order/phone" component={Price30} />
-
+          <Route path="/logout" component={Logout} />
         </Switch>
       </div>
     );

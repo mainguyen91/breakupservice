@@ -1,13 +1,9 @@
-const axios = require("axios");
 const Profile = require('../database/models/Profile');
 const Order = require('../database/models/Order');
 const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
 
 module.exports = {
-    getHomePage: (req, res) => {
-        res.render("index.html");
-    },
     getRegistrationPage: (req, res) => {
         res.render("/register");
     },
@@ -47,7 +43,7 @@ module.exports = {
                             res.send(req.session.user);
                         } else {
                             console.log("Something went wrong when loggin in");
-                            res.redirect("/login");
+                            res.send("/login");
                         }
                     })
                     .catch(error => console.error(`Couldn't login: ${error.stack}`));
@@ -67,5 +63,13 @@ module.exports = {
     },
     viewOrder: (req, res) => {
         Order.findAll
+    },
+    logout: (req, res) => {
+        if(req.session.user && req.cookies.userCookie) {
+            res.clearCookie("userCookie");
+            res.redirect("/");
+        } else {
+            res.redirect("login");
+        }
     }
 }
