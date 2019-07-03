@@ -1,16 +1,9 @@
-const axios = require("axios");
 const Profile = require('../database/models/Profile');
 const Order = require('../database/models/Order');
 const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
 
 module.exports = {
-    getHomePage: (req, res) => {
-        res.render("index.html");
-    },
-    getRegistrationPage: (req, res) => {
-        res.render("/register");
-    },
     postNewProfile: (req, res) => {
         const errors = validationResult(req)
 
@@ -47,7 +40,7 @@ module.exports = {
                             res.send(req.session.user);
                         } else {
                             console.log("Something went wrong when loggin in");
-                            res.redirect("/login");
+                            res.send("/login");
                         }
                     })
                     .catch(error => console.error(`Couldn't login: ${error.stack}`));
@@ -63,6 +56,18 @@ module.exports = {
             })
             .catch(error => console.error(`Could not save user ${error.stack}`))
 
+    },
+    logoutFunction: (req, res) => {
+        if(req.session.user && req.cookies.userCookie) {
+            res.clearCookie("userCookie");
+            if(!req.cookies.userCookie){
+                res.send(false)
+            } else {
+                res.send(true)
+            }
+        } else {
+            console.log("No user logged")
+        }
     },
     getOrderFromDb: (req, res) => {
         Order.findAll({

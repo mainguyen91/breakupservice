@@ -2,11 +2,10 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
 const {
-    getHomePage,
-    getRegistrationPage,
     postNewProfile,
     loggedUser,
-    postNewOrder,
+    postNewOrder, 
+    logoutFunction,
     getOrderFromDb,
     getAllOrders
 } = require("./controllers/routeController");
@@ -26,23 +25,26 @@ app.use(session({
 );
 app.use(morgan("dev"));
 
-let isUserLoggedIn = (req, res, next) => {
-    if (req.session.user && req.cookies.authCookie) {
-        res.redirect("/profile")
-    } else {
-        next();
+function checkCookies(req, res) {
+    if(!req.cookies.userCookie) {
+        res.send(false)
+    }else {
+        res.send(true)
     }
 }
 
-app.get("/", isUserLoggedIn, getHomePage);
+app.get("/home", (req, res) => {
+    checkCookies(req, res)
+});
 
-app.get("/register", isUserLoggedIn, getRegistrationPage);
 app.post("/register", postNewProfile);
 
 
 app.post("/login", loggedUser);
 
+app.post("/newOrder", postNewOrder);
 
+app.get("/logout", logoutFunction);
 
 app.post("/newOrder", postNewOrder);
 app.get("/overview", getOrderFromDb);

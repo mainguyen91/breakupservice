@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import Navbar from './Navbar/Navbar';
 
 class Register extends Component {
     constructor(props) {
@@ -46,6 +47,7 @@ class Register extends Component {
         if (this.state.redirect) return <Redirect to="/profile" />
         else return (
             <div>
+                <Navbar />
                 <h1>Register Form</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div>

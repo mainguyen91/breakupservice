@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-
+import LoggedNavbar from "./LoggedNavbar/LoggedNavbar";
 import axios from 'axios';
+
 export default class ViewOrder extends Component {
     constructor(props) {
         super(props);
@@ -20,6 +21,7 @@ export default class ViewOrder extends Component {
     render() {
         return (
             <div>
+                <LoggedNavbar />
                 <h1>Thank you for placing the order. This is an overview of your order:</h1>
                 <p>Your name as known by your STBE: {this.state.orders.nameClient}</p>
                 <p>Name of your STBE: {this.state.orders.nameSo}</p>
