@@ -56,8 +56,7 @@ module.exports = {
     },
     postNewOrder: (req, res) => {
         let newOrder = req.body;
-
-        Order.create({ nameClient: newOrder.nameClient, nameSo: newOrder.nameSo, service: newOrder.service, contactSo: newOrder.contactSo, situation: newOrder.situation, message: newOrder.message, orderExecuted: newOrder.orderExecuted, profileId: req.session.user.id })
+        Order.create({ nameClient: newOrder.nameClient, nameSo: newOrder.nameSo, service: newOrder.service, contactSo: newOrder.contactSo, situation: newOrder.situation, message: newOrder.message, status: newOrder.status, profileId: req.session.user.id })
             .then(results => {
                 console.log(results.dataValues)
                 res.send(results.dataValues)
@@ -72,7 +71,6 @@ module.exports = {
             order: [['createdAt', 'DESC']]
         })
             .then(allOrder => {
-                //console.log(allOrder)
                 res.send(allOrder[0].dataValues)
             })
             .catch(error => console.error(`Something went wrong when finding order ${error.stack}`))
@@ -82,14 +80,15 @@ module.exports = {
             where: { profileId: req.session.user.id }
         })
             .then(allOrder => {
-                console.log(allOrder)
                 let results = allOrder.map(order => {
                     return {
                         id: order.dataValues.id,
+                        createdAt: order.dataValues.createdAt,
                         nameClient: order.dataValues.nameClient,
                         nameSo: order.dataValues.nameSo,
                         service: order.dataValues.service,
-                        contactSo: order.dataValues.contactSo
+                        contactSo: order.dataValues.contactSo,
+                        status: order.dataValues.status
                     }
                 })
                 res.send(results)

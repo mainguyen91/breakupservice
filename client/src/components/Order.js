@@ -33,8 +33,6 @@ class Order extends Component {
         axios
             .post('/newOrder', order)
             .then(results => {
-                console.log(results)
-                //set state for Form.js with results from the server to be sent to App.js (React)
                 this.setState({
                     id: results.data.id,
                     nameClient: results.data.nameClient,

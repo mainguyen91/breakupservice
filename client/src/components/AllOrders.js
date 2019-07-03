@@ -23,10 +23,12 @@ export default class AllOrders extends Component {
 
             <div key={index}>
                 <p>Order number: {order.id}</p>
+                <p>At: {order.createdAt}</p>
                 <p>Your name as known by your STBE: {order.nameClient}</p>
                 <p>Name of your STBE: {order.nameSo}</p>
                 <p>Break-up method: {order.service}</p>
                 <p>Contact details of your STBE: {order.contactSo}</p>
+                <p>Status of order: {order.status}</p>
                 <p>--------------------</p>
             </div>
         ))

@@ -3,7 +3,7 @@ import ViewOrder from './ViewOrder';
 import OrderSuccess from './OrderSuccess';
 import { Route, Switch, Link } from 'react-router-dom';
 
-export default class Pricing extends Component {
+export default class Price30 extends Component {
 
     render() {
         return (

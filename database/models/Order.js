@@ -8,7 +8,7 @@ const Order = connector.define('order', {
     contactSo: Sequelize.STRING,
     situation: Sequelize.TEXT,
     message: Sequelize.TEXT,
-    orderExecuted: { type: Sequelize.BOOLEAN, defaultValue: false }
+    status: { type: Sequelize.TEXT, defaultValue: 'being processed' }
 });
 
 Profile.hasMany(Order);
