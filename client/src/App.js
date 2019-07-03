@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Route, Switch} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Pricing from './components/Pricing';
 import Register from './components/Register';
-import Login from './components/Login';
+import Login from './components/Login/Login';
 import Order from './components/Order';
 import Price10 from './components/Price10';
 import Price30 from './components/Price30'

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Redirect} from 'react-router-dom';
-import Navbar from './Navbar/Navbar';
+import { Redirect } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
+import '../Login/Login.css';
 
 export default class Login extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ export default class Login extends Component {
                     password: results.data.password,
                     redirect: true
                 })
-                
+
             })
             .catch(error => console.error(`Couldn't login: ${error.stack}`))
     }

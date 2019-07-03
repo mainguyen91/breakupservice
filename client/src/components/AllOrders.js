@@ -19,7 +19,7 @@ export default class AllOrders extends Component {
     }
 
     render() {
-        const finalOrder = this.state.orders.map((order, index) => (
+        const finalOrder = this.state.orders.reverse().map((order, index) => (
 
             <div key={index}>
                 <p>Order number: {order.id}</p>
