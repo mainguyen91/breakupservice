@@ -59,6 +59,7 @@ module.exports = {
 
     },
     logoutFunction: (req, res) => {
+        console.log(req.session.user)
         if(req.session.user && req.cookies.userCookie) {
             res.clearCookie("userCookie");
             if(!req.cookies.userCookie){

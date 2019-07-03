@@ -26,10 +26,11 @@ export default class Logout extends Component {
   }
 
   render() {
-    if(this.setState.redirect === true) return <Redirect to="/" />
+    if(this.state.redirect === true) return <Redirect to="/"/>
 
     else return (
       <div>
+
         <form onSubmit={this.onClick.bind(this)} >
           <input type="submit" value="logout" />
         </form>

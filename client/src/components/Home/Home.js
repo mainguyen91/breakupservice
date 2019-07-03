@@ -3,7 +3,7 @@ import '../Home/Home.css';
 import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
 import LoggedNavbar from '../LoggedNavbar/LoggedNavbar';
-import couple from '../../public/img/couple.jpg';
+import pattern from '../../public/img/pattern.jpg';
 import thunder from '../../public/img/thunder.png';
 
 class Home extends Component {
@@ -27,7 +27,7 @@ class Home extends Component {
         return (
             <div>
                 <LoggedNavbar /> 
-                <img className="hero" src={couple} alt="Couple"
+                <img className="hero" src={pattern} alt="Couple"
                 />
                 <div className="hero-text">
                 <h1>The BreakUp</h1>
@@ -40,7 +40,7 @@ class Home extends Component {
             return (
             <div>
                 <Navbar />
-                <img className="hero" src={couple} alt="Couple"
+                <img className="hero" src={pattern} alt="Couple"
                 />
                 <div className="hero-text">
                 <h1>The BreakUp</h1>
