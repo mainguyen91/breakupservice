@@ -24,7 +24,7 @@ export default class Menu extends React.Component {
           width: '100vw',
           display: 'flex',
           flexDirection: 'column',
-          background: '#5c260b',
+          background: '#7f270c',
           opacity: 0.95,
           color: '#fafafa',
           transition: 'height 0.3s ease',

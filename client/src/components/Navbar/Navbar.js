@@ -10,7 +10,7 @@ import '../Navbar/Logo.css';
 class Navbar extends Component {
     constructor(props){
       super(props);
-    //   this.routeChange = this.routeChange.bind(this);
+      // this.routeChange = this.routeChange.bind(this);
       this.state={
         menuOpen:false,
       }
@@ -24,19 +24,19 @@ class Navbar extends Component {
     // routeChange() {
     //     let menu = ['Home', 'About Us','Pricing','Register','Login']
     //     menu.map(index => {
-    //         if(index === 0){
+    //         if(index === "Home"){
     //             let path = `/`
     //             return this.props.history.push(path);
-    //         }else if (index === 1){
+    //         }else if (index === "About Us"){
     //             let path = `/about`
     //             return this.props.history.push(path);
-    //         }else if (index === 2){
+    //         }else if (index === "Pricing"){
     //             let path = `/pricing`
     //             return this.props.history.push(path);
-    //         }else if (index === 3){
+    //         }else if (index === "Register"){
     //             let path = `/register`
     //             return this.props.history.push(path);
-    //         } else if(index === 4){
+    //         } else if(index === "Login"){
     //             let path = `/login`
     //             return this.props.history.push(path);
     //         } return index
@@ -55,7 +55,7 @@ class Navbar extends Component {
             opacity: 0.9,
             display:'flex',
             alignItems:'center',
-            background: '#f89214',
+            background: '#7f270c',
             width: '100%',
             color: 'white',
           },
@@ -88,8 +88,9 @@ class Navbar extends Component {
           </div>
           <Menu open={this.state.menuOpen}>
             <MenuItem>
-                <Link to="/" className="links"><p>Home</p></Link>
-                <Link to="/about" className="links"><p>About</p></Link>
+              {/* {menuItems} */}
+                <Link to="/" className="links" ><p>Home</p></Link>
+                <Link to="/about" className="links" ><p>About</p></Link>
                 <Link to="/pricing" className="links"><p>Pricing</p></Link>
                 <Link to="/register" className="links"><p>Register</p></Link>
                 <Link to="/login" className="links"><p>Log in</p></Link>

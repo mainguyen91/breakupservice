@@ -30,15 +30,15 @@ export default class MenuItem extends React.Component{
           animationDelay:this.props.delay,
   
         },
-        line: {
-          width: '90%',
-          height: '1px',
-          background: 'gray',
-          margin: '0 auto',
-          animation: '0.5s shrink forwards',
-          animationDelay:this.props.delay,
+        // line: {
+        //   width: '90%',
+        //   height: '1px',
+        //   background: 'gray',
+        //   margin: '0 auto',
+        //   animation: '0.5s shrink forwards',
+        //   animationDelay:this.props.delay,
           
-        }
+        // }
       }
       return(
         <div style={styles.container}>

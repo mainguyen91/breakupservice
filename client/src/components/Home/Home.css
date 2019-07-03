@@ -1,24 +1,17 @@
-html{
-    height: 100%;
-}
-
-body{
+body, html{
     height: 100%;
     margin: auto;
-    background-color: #FAEFD1;
     text-align: center;
+    background-color: #FAEFD1;
 }
+ 
 
 .hero {
     width: 100%;
-    height: 400px;
-  background-repeat: repeat;
-  background-size: cover;
-    height: 100%;
     min-width: 100%;
-    min-height: 100%;
-    
     margin-top: 2.5em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../public/img/couple.jpg");
+    position: relative;
 }
 
 h1{
@@ -58,14 +51,19 @@ p {
   }
 
 @media screen and (min-width: 768px) {
-    /* .hero-text {
-        text-align: center;
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-    } */
+    .hero-text {
+       
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+      }
     .icon{
         display: none;
     }
