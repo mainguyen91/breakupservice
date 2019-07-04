@@ -1,6 +1,7 @@
 const Profile = require('../database/models/Profile');
-const { validationResult } = require("express-validator/check");
+const { validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
+
 
 module.exports = {
     postNewProfile: (req, res) => {

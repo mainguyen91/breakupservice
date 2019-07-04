@@ -13,7 +13,9 @@ const { connector } = require('./database/configuration/dbConfig');
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const morgan = require("morgan");
+const flash = require("express-flash");
 
+app.use(flash())
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
