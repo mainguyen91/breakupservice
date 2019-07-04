@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-import Navbar from './Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 
 class Register extends Component {
     constructor(props) {

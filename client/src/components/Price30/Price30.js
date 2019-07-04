@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ViewOrder from './ViewOrder';
+import ViewOrder from '../ViewOrder';
 import OrderSuccess from './OrderSuccess';
 import { Route, Switch, Link } from 'react-router-dom';
 

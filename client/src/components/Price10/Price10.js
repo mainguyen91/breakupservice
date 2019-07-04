@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ViewOrder from './ViewOrder'
+import ViewOrder from '../ViewOrder'
 
 export default class Pricing extends Component {
     render() {

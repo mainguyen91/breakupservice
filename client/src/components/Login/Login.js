@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
-import Navbar from './Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 
 export default class Login extends Component {
     constructor(props) {
