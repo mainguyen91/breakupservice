@@ -2,20 +2,30 @@ body, html{
     height: 100%;
     margin: auto;
     text-align: center;
-    background-color: #FAEFD1;
+    /* background-color: #FAEFD1; */
+    background-image: url('../../public/img/pattern2.jpg');
+    background-repeat: repeat;
 }
  
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
 .hero {
     width: 100%;
     min-width: 100%;
     margin-top: 2.5em;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../public/img/couple.jpg");
-    position: relative;
+    background-image: url("../../public/img/couple.jpg");
+    display: none;
 }
 
 h1{
     font-size: 36px;
+    margin-top: 4em;
 }
 
 h3 {
@@ -51,20 +61,24 @@ p {
   }
 
 @media screen and (min-width: 768px) {
-    .hero-text {
-       
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  text-align: center;
+    .hero-text {     
+        background-color: rgba(127,39,12, 0.7); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        text-align: center;
       }
     .icon{
         display: none;
+    }
+    .hero{
+        display: block;
+    }
+    h1{
+        margin-top: 0;
     }
 }

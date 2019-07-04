@@ -40,14 +40,18 @@ class Home extends Component {
             return (
             <div>
                 <Navbar />
-                <img className="hero" src={couple} alt="Couple"
-                />
-                <div className="hero-text">
-                <h1>The BreakUp</h1>
-                <h3>Welcome to BreakUp Service, your break up facilitator.</h3>
-                <p>You made the decision - great! Let us do the rest!</p>
+                <div className="container">
+                    
+                    <img className="hero" src={couple} alt="Couple"
+                    />
+                    <div className="hero-text">
+                    <h1>The BreakUp</h1>
+                    <h3>Welcome to BreakUp Service, your break up facilitator.</h3>
+                    <p>You made the decision - great! Let us do the rest!</p>
+                    </div>
+                    <img className="icon" src={thunder} alt="Lightening" />
                 </div>
-                <img className="icon" src={thunder} alt="Lightening" />
+                
             </div>
         )
         }

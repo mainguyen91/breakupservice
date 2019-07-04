@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import { withRouter } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import Menu from './Menu';
-import MenuItem from './MenuItem';
 import MenuButton from './MenuButton';
 import '../Navbar/Navbar.css';
 import '../Navbar/Logo.css';
@@ -10,7 +8,6 @@ import '../Navbar/Logo.css';
 class Navbar extends Component {
     constructor(props){
       super(props);
-      // this.routeChange = this.routeChange.bind(this);
       this.state={
         menuOpen:false,
       }
@@ -19,30 +16,6 @@ class Navbar extends Component {
     handleMenuClick() {
       this.setState({menuOpen:!this.state.menuOpen});
     }
-    
-
-    // routeChange() {
-    //     let menu = ['Home', 'About Us','Pricing','Register','Login']
-    //     menu.map(index => {
-    //         if(index === "Home"){
-    //             let path = `/`
-    //             return this.props.history.push(path);
-    //         }else if (index === "About Us"){
-    //             let path = `/about`
-    //             return this.props.history.push(path);
-    //         }else if (index === "Pricing"){
-    //             let path = `/pricing`
-    //             return this.props.history.push(path);
-    //         }else if (index === "Register"){
-    //             let path = `/register`
-    //             return this.props.history.push(path);
-    //         } else if(index === "Login"){
-    //             let path = `/login`
-    //             return this.props.history.push(path);
-    //         } return index
-    //     })
-        
-    // }
     
     render(){
       const styles= 
@@ -69,16 +42,6 @@ class Navbar extends Component {
             transition: 'filter 1s ease',
           },
         }
-      // const menu = ['Home', 'About Us','Pricing','Register','Login']
-      // const menuItems = menu.map((val,index)=>{
-    
-      //   return (
-      //     <MenuItem 
-      //       key={index} 
-      //       delay={`${index * 0.1}s`}
-            
-      //       onClick={this.routeChange}>{val}</MenuItem>)
-      // });
       
       return(
         <div>
@@ -87,18 +50,15 @@ class Navbar extends Component {
             <div className="logo">The BreakUp.</div>
           </div>
           <Menu open={this.state.menuOpen}>
-            <MenuItem>
-              {/* {menuItems} */}
-                <Link to="/" className="links" ><p>Home</p></Link>
-                <Link to="/about" className="links" ><p>About</p></Link>
-                <Link to="/pricing" className="links"><p>Pricing</p></Link>
-                <Link to="/register" className="links"><p>Register</p></Link>
-                <Link to="/login" className="links"><p>Log in</p></Link>
-            </MenuItem>
+              <Link to="/" className="links" ><p>Home</p></Link>
+              <Link to="/about" className="links" ><p>About</p></Link>
+              <Link to="/pricing" className="links"><p>Pricing</p></Link>
+              <Link to="/register" className="links"><p>Register</p></Link>
+              <Link to="/login" className="links"><p>Log in</p></Link> 
           </Menu>
         </div>
       )
     }
   }
 
-  export default withRouter(Navbar)
+  export default Navbar;

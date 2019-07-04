@@ -25,26 +25,11 @@ export default class Logout extends Component {
   }
 
 
-  // onClick = e => {
-  //   e.preventDefault();
-  //   axios.get("/logout")
-  //     .then(results => {
-  //       if(results.data === true) {
-  //         this.setState({redirect: true});
-  //       } else {
-  //         console.log("Something went wrong")
-  //       }
-  //     })
-  //     .catch(error =>
-  //       console.error(`There's an error: ${error.stack}`))
-  // }
-
   render() {
     if(this.state.redirect === true) return <Redirect to="/"/>
 
     else return (
       <div>
-
         <form>
           <input type="submit" value="logout" />
         </form>

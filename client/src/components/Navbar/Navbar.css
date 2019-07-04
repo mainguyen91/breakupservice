@@ -30,6 +30,10 @@
     color: white;
 }
 
+p {
+  text-transform: capitalize;
+}
+
 .links:hover {
-  color:#000;
+  color:#c38430;
 }
