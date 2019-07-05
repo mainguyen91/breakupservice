@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 
 export default class Pricing extends Component {
     render() {

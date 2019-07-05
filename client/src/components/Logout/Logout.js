@@ -11,8 +11,7 @@ export default class Logout extends Component {
     }
   }
 
-  onClick = e => {
-    e.preventDefault();
+  componentDidMount(){
     axios.get("/logout")
       .then(results => {
         if(results.data === true) {
@@ -25,12 +24,13 @@ export default class Logout extends Component {
         console.error(`There's an error: ${error.stack}`))
   }
 
+
   render() {
-    if(this.setState.redirect === true) return <Redirect to="/" />
+    if(this.state.redirect === true) return <Redirect to="/"/>
 
     else return (
       <div>
-        <form onSubmit={this.onClick.bind(this)} >
+        <form>
           <input type="submit" value="logout" />
         </form>
       </div>

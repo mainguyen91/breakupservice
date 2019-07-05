@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
-import '../Login/Login.css';
 
 export default class Login extends Component {
     constructor(props) {
@@ -51,7 +50,7 @@ export default class Login extends Component {
                         <input
                             type="email"
                             name="email"
-                            autocomplete="off"
+                            autoComplete="off"
                             value={this.state.email}
                             onChange={this.handleChange}
                             required
@@ -63,7 +62,7 @@ export default class Login extends Component {
                         <input
                             type="password"
                             name="password"
-                            autocomplete="off"
+                            autoComplete="off"
                             value={this.state.password}
                             onChange={this.handleChange}
                             required
