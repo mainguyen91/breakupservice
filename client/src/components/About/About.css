@@ -1,26 +1,22 @@
-/* ABOUT PAGE */
+.about{
+    background-image: url('../../public/img/pattern2.jpg');
+    background-repeat: repeat;
+}
+
 .main {
     padding: 2em;
     min-height: 100vh;
-    text-align: center;
-    background-color: #F4976C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
-  .overlay span{
-      position: relative;
-      opacity: 0;
-      top: 1em;
-      animation: animateOverlay 1s ease-in-
-  out forwards;
+  .center{
+    font-family: 'Lora', serif;
+    max-width: 700px;
+    background-color: rgba(241, 179, 71, 0.9);
+    color: rgb(70, 51, 41);
+    line-height: 45px;
+    
   }
-  .overlay span:nth-child(4n) { animation-delay: 
-  0s; }
-  
-  .overlay span:nth-child(4n+1) { animation-delay: 1s; }
-  .overlay span:nth-child(4n+3) { animation-delay: 2s; }
-  .overlay span:nth-child(4n+2) { animation-delay: 3s; }
-  @keyframes animateOverlay {
-    to {
-  opacity: 1;
-  top: 0;
-  } }

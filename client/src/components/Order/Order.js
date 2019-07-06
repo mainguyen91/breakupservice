@@ -34,8 +34,6 @@ class Order extends Component {
         axios
             .post('/newOrder', order)
             .then(results => {
-                console.log(results)
-                //set state for Form.js with results from the server to be sent to App.js (React)
                 this.setState({
                     id: results.data.id,
                     nameClient: results.data.nameClient,
@@ -67,6 +65,7 @@ class Order extends Component {
                                 name="nameClient"
                                 value={this.state.nameClient}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             />
                         </div>
@@ -79,6 +78,7 @@ class Order extends Component {
                                 name="nameSo"
                                 value={this.state.nameSo}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             />
                         </div>
@@ -90,6 +90,7 @@ class Order extends Component {
                                 name="service"
                                 value={this.state.service}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             >
                                 <option>Please select</option>
@@ -106,6 +107,7 @@ class Order extends Component {
                                 name="contactSo"
                                 value={this.state.contactSo}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             />
                         </div>
@@ -118,6 +120,7 @@ class Order extends Component {
                                 name="situation"
                                 value={this.state.situation}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             />
                         </div>
@@ -130,7 +133,7 @@ class Order extends Component {
                                 name="message"
                                 value={this.state.message}
                                 onChange={this.handleChange}
-
+                                autoComplete='off'
                             />
                         </div>
                         <br />

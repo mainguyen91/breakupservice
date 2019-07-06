@@ -4,14 +4,18 @@ import Navbar from '../Navbar/Navbar';
 
 const About = () => {
     return (
-        <div>
+        <div className="about">
             <Navbar />
             <div className="main">
-                <h3 className="overlay">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum tristique libero, a sodales ligula sollicitudin nec. 
-                Vivamus magna erat, molestie ac lectus quis, cursus sollicitudin quam. Donec semper accumsan euismod. Nam faucibus ac arcu eget 
-                maximus. Phasellus luctus felis nec commodo ornare. Vivamus cursus maximus odio, nec pellentesque ipsum convallis et. Proin quis 
-                congue urna, et congue purus. Suspendisse accumsan imperdiet purus, quis interdum lacus rutrum sed. Class aptent taciti 
-                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h3>
+                <p className="center">We are Mai and Daria, two creative individuals who come up with idea how to ease your break up struggle.
+                We've been there - ghoasting, orbiting, benching happens way too often. Why not changing this?<br />
+                It's enough of a burden to make the break up decision - we can take care of the rest. There won't be awkward situations
+                anymore, weird silence or inappropriate words. <br />
+                After you sign up andfill in the form, we'll contact a person you decided to stop 
+                seeing in a way preferred by you (via phone or email/text) and pass the message you choose (fully personalized).<br />
+                We truly believe in the power of finishing what has been started and we're here to simplify communication, 
+                transparency and help people everywhere to give them peace of mind. 
+                We're excited to hear from you!</p>
             </div>
         </div>
     );

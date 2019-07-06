@@ -30,9 +30,7 @@ export default class Logout extends Component {
 
     else return (
       <div>
-        <form>
-          <input type="submit" value="logout" />
-        </form>
+        <Redirect to="/logout"/>
       </div>
     )
   }

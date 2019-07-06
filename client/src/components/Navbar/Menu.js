@@ -24,15 +24,16 @@ export default class Menu extends React.Component {
           width: '100vw',
           display: 'flex',
           flexDirection: 'column',
-          background: '#7f270c',
+          background: '#daa520',
           opacity: 0.95,
-          color: '#fafafa',
+          // color: '#daa520',
+          // color: 'rgb(99, 72, 57)',
           transition: 'height 0.3s ease',
           zIndex: 2,
         },
-        menuList: {
-          paddingTop: '3rem',
-        }
+        // menuList: {
+        //   paddingTop: '3rem',
+        // }
       }
       return(
         <div style={styles.container}>

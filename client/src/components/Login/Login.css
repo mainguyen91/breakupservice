@@ -1,0 +1,20 @@
+.login{
+    background-image: url('../../public/img/pattern2.jpg');
+    background-repeat: repeat;
+}
+
+.two-boxes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.left {
+	border: 1px solid grey;
+}
+
+.zebra{
+	height: 100%;
+	width: auto;
+}

@@ -1,19 +1,22 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
-const {
-    postNewProfile,
-    loggedUser,
-    postNewOrder, 
-    logoutFunction,
-    getOrderFromDb,
-    getAllOrders
-} = require("./controllers/routeController");
+
+const { postNewProfile } = require("./controllers/registerController");
+const { loggedUser } = require("./controllers/loginController");
+const { postNewOrder } = require("./controllers/newOrderController");
+const { logoutFunction } = require("./controllers/logoutController");
+const { getOrderFromDb } = require("./controllers/viewOrderController");
+const { getAllOrders } = require("./controllers/allOrdersController");
+
+
 const { connector } = require('./database/configuration/dbConfig');
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const morgan = require("morgan");
+const flash = require("express-flash");
 
+app.use(flash())
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
@@ -26,9 +29,9 @@ app.use(session({
 app.use(morgan("dev"));
 
 function checkCookies(req, res) {
-    if(!req.cookies.userCookie) {
+    if (!req.cookies.userCookie) {
         res.send(false)
-    }else {
+    } else {
         res.send(true)
     }
 }

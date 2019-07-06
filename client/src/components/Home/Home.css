@@ -2,11 +2,9 @@ body, html{
     height: 100%;
     margin: auto;
     text-align: center;
-    /* background-color: #FAEFD1; */
-    background-image: url('../../public/img/pattern2.jpg');
-    background-repeat: repeat;
+    background-color: #FAEFD1;
 }
- 
+
 .container {
     display: flex;
     flex-direction: column;
@@ -26,19 +24,18 @@ body, html{
 h1{
     font-size: 36px;
     margin-top: 4em;
+    color: rgb(99, 72, 57);
 }
 
 h3 {
-    padding: 0 2em;
-    line-height: 30px;
-    margin: 0;
-    font-size: 20px;
+    line-height: 35px;
+    margin: 1em;
+    font-size: 25px;
+    letter-spacing: 3px;
+    /* color: rgb(218, 168, 32); */
+    color: rgb(99, 72, 57);
 }
 
-p {
-    padding: 0 2em;
-    line-height: 25px;
-}
 
 .icon {
     width: 50px;
@@ -62,11 +59,10 @@ p {
 
 @media screen and (min-width: 768px) {
     .hero-text {     
-        background-color: rgba(127,39,12, 0.7); /* Black w/opacity/see-through */
-        color: white;
+        /* background-color: rgba(127,39,12, 0.7); Black w/opacity/see-through */
         font-weight: bold;
         position: absolute;
-        top: 50%;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
