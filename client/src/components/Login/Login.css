@@ -1,20 +1,52 @@
-.login{
-    background-image: url('../../public/img/pattern2.jpg');
-    background-repeat: repeat;
-}
-
-.two-boxes{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
+.modal{
+	height: 50%;
+  	width: 35%;
+  	position: fixed;
+  	z-index: 1;
+  	top: 0;
+  	overflow: hidden;
+  	padding-top: 50px;
+	margin-top: 100px;
+	border-radius: 10px;
+	box-shadow: 5px 10px 18px;
 }
 
 .left {
-	border: 1px solid grey;
+	left: 0;
+	background-color: white;
+	margin-left: 225px;
+  }
+  
+.right {
+	right: 0;
+	margin-right: 225px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+  
+.zebra{
+	flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
-.zebra{
-	height: 100%;
-	width: auto;
+.input-block-login{
+	width: 400px;
+	display: flex;
+    flex-direction: column;
+    padding: 5px 5px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
 }
+
+.login-form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+

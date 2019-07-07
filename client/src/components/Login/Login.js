@@ -45,11 +45,11 @@ export default class Login extends Component {
             <div className="login">
                 <Navbar />
                 <div className="two-boxes">
-                <div className="modal-left">
+                <div className="modal left">
                 <h1 className="modal-title">Welcome!</h1>
                     <p className="modal-desc">Sign in to access your account</p>
-                    <form onSubmit={this.handleSubmit}>
-                        <div className="input-block">
+                    <form className="login-form" onSubmit={this.handleSubmit}>
+                        <div className="input-block-login">
                             <label htmlFor="email" className="input-label">Email</label>
                             <input type="email" name="email" id="email" placeholder="Email" 
                             autoComplete="off"
@@ -57,7 +57,7 @@ export default class Login extends Component {
                             onChange={this.handleChange}
                             required/>
                         </div>
-                        <div className="input-block">
+                        <div className="input-block-login">
                         <label htmlFor="password" className="input-label">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" autoComplete="off"
                                 value={this.state.password}
@@ -68,10 +68,9 @@ export default class Login extends Component {
                             <button className="input-button" type="submit" value="Submit">Login</button>
                         </div>
                     </form>
-                    <p className="sign-up">Don't have an account? <a href="/">Sign up now</a></p>
                 </div>
-                <div className="modal-right">
-                    <img className="zebra" src={zebra} alt="" />
+                <div className="modal right">
+                    <img className="zebra" src={zebra} alt="zebra wallpaper" />
                 </div>
                 </div>
             </div>

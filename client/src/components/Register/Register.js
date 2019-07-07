@@ -53,13 +53,14 @@ class Register extends Component {
                 <div className="register-container">    
                 <h1 className="form-header">Create account</h1>
                 <div className="register-form">
-                <form onSubmit={this.handleSubmit}>
+                <form className="form" onSubmit={this.handleSubmit}>
                     <div className="input-block">
                         <label className="input-label">Name:</label>
                         <br />
                         <input
                             type="text"
                             name="name"
+                            placeholder="Name"
                             value={this.state.name}
                             onChange={this.handleChange}
                             required
@@ -71,6 +72,7 @@ class Register extends Component {
                         <input
                             type="email"
                             name="email"
+                            placeholder="Email"
                             value={this.state.email}
                             onChange={this.handleChange}
                             required
@@ -82,6 +84,7 @@ class Register extends Component {
                         <input
                             type="password"
                             name="password"
+                            placeholder="Password"
                             value={this.state.password}
                             onChange={this.handleChange}
                             required
