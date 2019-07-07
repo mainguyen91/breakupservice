@@ -65,7 +65,7 @@ export default class Login extends Component {
                                 required/>
                         </div>
                         <div className="modal-buttons">
-                            <button className="input-button" type="submit" value="Submit">Login</button>
+                            <button className="submit-button" type="submit" value="Submit">Login</button>
                         </div>
                     </form>
                 </div>

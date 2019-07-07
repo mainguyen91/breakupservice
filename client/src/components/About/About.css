@@ -7,7 +7,7 @@
     padding: 2em;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -17,6 +17,11 @@
     max-width: 700px;
     background-color: rgba(241, 179, 71, 0.9);
     color: rgb(70, 51, 41);
-    line-height: 45px;
-    
+    line-height: 40px;
+    padding:10px;
+  }
+
+  .us{
+    height: auto;
+    width: 40%;
   }
