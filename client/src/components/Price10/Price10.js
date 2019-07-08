@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import ViewOrder from '../ViewOrder/ViewOrder'
-import OrderSuccess from '../OrderSuccess/OrderSuccess';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LoggedNavbar from '../LoggedNavbar/LoggedNavbar';
+import Payment10 from '../Payment10';
 
 export default class Price10 extends Component {
     render() {
@@ -10,10 +10,9 @@ export default class Price10 extends Component {
             <div>
                 <LoggedNavbar />
                 <ViewOrder orders={this.orders} />
-                <Link to="/ordersuccess"><p>Pay 10 euro</p></Link>
-                <Switch>
-                    <Route path="/ordersuccess" component={OrderSuccess} />
-                </Switch>
+                <p>Please pay 10 euro with the PayPal button below</p>
+                <Payment10 />
+                <Link to="/cancel"><p>Cancel this order</p></Link>
             </div>
         )
     }

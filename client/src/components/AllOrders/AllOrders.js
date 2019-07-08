@@ -13,7 +13,6 @@ export default class AllOrders extends Component {
         axios
             .get('/viewallorders')
             .then(resultsFromServer => {
-                console.log(resultsFromServer.data)
                 this.setState({ orders: resultsFromServer.data })
             })
             .catch(error => console.error(`Something went wrong when component mounted ${error.stack}`))
