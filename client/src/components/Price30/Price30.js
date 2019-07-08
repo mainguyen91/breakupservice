@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ViewOrder from '../ViewOrder/ViewOrder';
 import OrderSuccess from '../OrderSuccess/OrderSuccess';
 import Payment30 from '../Payment30';
-import Cancel from '../Cancel'
+import Cancel from '../Cancel/Cancel'
 import { Route, Switch, Link } from 'react-router-dom';
 import LoggedNavbar from '../LoggedNavbar/LoggedNavbar';
 

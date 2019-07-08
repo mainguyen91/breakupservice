@@ -13,7 +13,7 @@ import Logout from './components/Logout/Logout';
 import ViewOrder from './components/ViewOrder/ViewOrder';
 import AllOrders from './components/AllOrders/AllOrders';
 import OrderSuccess from './components/OrderSuccess/OrderSuccess';
-import Cancel from './components/Cancel'
+import Cancel from './components/Cancel/Cancel'
 
 class App extends Component {
 
