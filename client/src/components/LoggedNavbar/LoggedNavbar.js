@@ -28,9 +28,8 @@ class LoggedNavbar extends Component {
             opacity: 0.9,
             display:'flex',
             alignItems:'center',
-            background: '#7f270c',
+            background: '#FAEFD1',
             width: '100%',
-            color: 'white',
           },
           body: {
             display: 'flex',
@@ -50,10 +49,42 @@ class LoggedNavbar extends Component {
             <div className="logo">The BreakUp.</div>
           </div>
           <Menu open={this.state.menuOpen}>
-                <Link to="/" className="links"><p>Home</p></Link>
-                <Link to="/loggedhome" className="links"><p>Place order</p></Link>
-                <Link to="/viewallorders" className="links"><p>View order</p></Link>
-                <Link to="/logout" className="links"><p>Log out</p></Link>
+          <Link to="/" className="links">
+                <div className="deconstructed">
+                  Home
+                  <div>Home</div>
+                  <div>Home</div>
+                  <div>Home</div>
+                  <div>Home</div>
+                </div>
+              </Link>
+              <Link to="/profile" className="links">
+                <div className="deconstructed">
+                  Place Order
+                  <div>Place Order</div>
+                  <div>Place Order</div>
+                  <div>Place Order</div>
+                  <div>Place Order</div>
+                </div>
+              </Link>
+              <Link to="/overview" className="links">
+                <div className="deconstructed">
+                  View Order
+                  <div>View Order</div>
+                  <div>View Order</div>
+                  <div>View Order</div>
+                  <div>View Order</div>
+                </div>
+              </Link>
+              <Link to="/logout" className="links">
+              <div className="deconstructed">
+                  Log out
+                  <div>Log out</div>
+                  <div>Log out</div>
+                  <div>Log out</div>
+                  <div>Log out</div>
+                </div>
+              </Link>
           </Menu>
         </div>
       )

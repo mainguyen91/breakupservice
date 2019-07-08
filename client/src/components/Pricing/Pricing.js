@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar/Navbar';
+import '../Pricing/Pricing.css';
 
 export default class Pricing extends Component {
     render() {
         return (
-            <div>
+            <div className="pricing">
                 <Navbar />
-                <h1>Hello from Pricing</h1>
+                <div className="main">
+                
+                </div>
             </div>
         )
     }

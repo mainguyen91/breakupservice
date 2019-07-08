@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import LoggedNavbar from "./LoggedNavbar/LoggedNavbar";
+import LoggedNavbar from "../LoggedNavbar/LoggedNavbar";
 import axios from 'axios';
 
 export default class ViewOrder extends Component {

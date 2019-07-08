@@ -25,29 +25,29 @@ class Home extends Component {
     render() {
         if (this.state.loggedIn === true) {
         return (
-            <div>
+            <div className="home">
                 <LoggedNavbar /> 
                 <img className="hero" src={couple} alt="Couple"
                 />
                 <div className="hero-text">
-                <h1>The BreakUp</h1>
-                <h3>Welcome to BreakUp Service, your break up facilitator.</h3>
-                <p>You made the decision - great! Let us do the rest!</p>
+                
+                <h3>Welcome to your break up facilitator.</h3>
+                <h3>You made the decision - let us do the rest!</h3>
                 </div>
                 <img className="icon" src={thunder} alt="Lightening" />
             </div>  
         )} else { 
             return (
-            <div>
+            <div className="home">
                 <Navbar />
                 <div className="container">
                     
                     <img className="hero" src={couple} alt="Couple"
                     />
                     <div className="hero-text">
-                    <h1>The BreakUp</h1>
-                    <h3>Welcome to BreakUp Service, your break up facilitator.</h3>
-                    <p>You made the decision - great! Let us do the rest!</p>
+                    
+                    <h3>Welcome to your break up facilitator.</h3>
+                    <h3>You made the decision - let us do the rest!</h3>
                     </div>
                     <img className="icon" src={thunder} alt="Lightening" />
                 </div>

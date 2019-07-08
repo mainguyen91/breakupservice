@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import LoggedNavbar from '../LoggedNavbar/LoggedNavbar';
+import '../Order/Order.css';
 
 class Order extends Component {
     constructor(props) {
@@ -34,8 +35,6 @@ class Order extends Component {
         axios
             .post('/newOrder', order)
             .then(results => {
-                console.log(results)
-                //set state for Form.js with results from the server to be sent to App.js (React)
                 this.setState({
                     id: results.data.id,
                     nameClient: results.data.nameClient,
@@ -54,42 +53,48 @@ class Order extends Component {
         else if (this.state.redirect && this.state.service === 'phone') return <Redirect to='/order/phone' />
         else
             return (
-                <div>
+                <div className="order">
                     <LoggedNavbar />
-                    <h1>Order Form</h1>
-                    <form onSubmit={this.handleSubmit}>
-                        <div>
-                            <label>Your name:</label>
+                    <div className="parent-container">
+                   <div className="order-container">
+                    <h1 className="form-header">Place your order</h1>
+                    <div className="order-form">
+                    <form className="form" onSubmit={this.handleSubmit}>
+                        <div className="input-block">
+                            <label className="input-label">Your name:</label>
                             <br />
                             <input
-                                placeholder="Your name as known by SO"
+                                placeholder="Your name as known by STBE"
                                 type="text"
                                 name="nameClient"
                                 value={this.state.nameClient}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             />
                         </div>
-                        <div>
-                            <label>SO name:</label>
+                        <div className="input-block">
+                            <label className="input-label">STBE name:</label>
                             <br />
                             <input
-                                placeholder="The name of your SO"
+                                placeholder="The name of your soon-to-be-ex"
                                 type="text"
                                 name="nameSo"
                                 value={this.state.nameSo}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             />
                         </div>
-                        <div>
-                            <label>Service:</label>
+                        <div className="input-block">
+                            <label className="input-label">Service:</label>
                             <br />
                             <select
                                 type="text"
                                 name="service"
                                 value={this.state.service}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             >
                                 <option>Please select</option>
@@ -97,45 +102,50 @@ class Order extends Component {
                                 <option value="phone">Phone 30 euro</option>
                             </select>
                         </div>
-                        <div>
-                            <label>Contact detail:</label>
+                        <div className="input-block">
+                            <label className="input-label">Contact details:</label>
                             <br />
                             <input
-                                placeholder="The contact info of your SO needed for required service"
+                                placeholder="The contact info of your STBE"
                                 type="text"
                                 name="contactSo"
                                 value={this.state.contactSo}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             />
                         </div>
-                        <div>
-                            <label>Situation:</label>
+                        <div className="input-block">
+                            <label className="input-label">Situation:</label>
                             <br />
                             <input
-                                placeholder="Short description of your situation to help us tailor the message to SO"
+                                placeholder="Short description of your situation"
                                 type="text"
                                 name="situation"
                                 value={this.state.situation}
                                 onChange={this.handleChange}
+                                autoComplete='off'
                                 required
                             />
                         </div>
-                        <div>
-                            <label>Message:</label>
+                        <div className="input-block">
+                            <label className="input-label">Message:</label>
                             <br />
                             <input
-                                placeholder="This field is not required. Please fill in if there is a certain message you want to send to SO"
+                                placeholder="This field is not required"
                                 type="text"
                                 name="message"
                                 value={this.state.message}
                                 onChange={this.handleChange}
-
+                                autoComplete='off'
                             />
                         </div>
                         <br />
-                        <input type="submit" value="Submit" />
+                        <input className="submit-button" type="submit" value="Submit" />
                     </form >
+                    </div>
+                    </div>
+                    </div>
                 </div >
             )
     }

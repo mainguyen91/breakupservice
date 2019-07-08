@@ -28,9 +28,9 @@ class Navbar extends Component {
             opacity: 0.9,
             display:'flex',
             alignItems:'center',
-            background: '#7f270c',
+            // background: '#7f270c',
+            background: '#FAEFD1',
             width: '100%',
-            color: 'white',
           },
           body: {
             display: 'flex',
@@ -50,11 +50,51 @@ class Navbar extends Component {
             <div className="logo">The BreakUp.</div>
           </div>
           <Menu open={this.state.menuOpen}>
-              <Link to="/" className="links" ><p>Home</p></Link>
-              <Link to="/about" className="links" ><p>About</p></Link>
-              <Link to="/pricing" className="links"><p>Pricing</p></Link>
-              <Link to="/register" className="links"><p>Register</p></Link>
-              <Link to="/login" className="links"><p>Log in</p></Link> 
+              <Link to="/" className="links">
+                <div className="deconstructed">
+                  Home
+                  <div>Home</div>
+                  <div>Home</div>
+                  <div>Home</div>
+                  <div>Home</div>
+                </div>
+              </Link>
+              <Link to="/about" className="links" >
+              <div className="deconstructed">
+                  About
+                  <div>About</div>
+                  <div>About</div>
+                  <div>About</div>
+                  <div>About</div>
+                </div>
+              </Link>
+              <Link to="/pricing" className="links">
+              <div className="deconstructed">
+                  Pricing
+                  <div>Pricing</div>
+                  <div>Pricing</div>
+                  <div>Pricing</div>
+                  <div>Pricing</div>
+                </div>
+                </Link>
+              <Link to="/register" className="links">
+              <div className="deconstructed">
+                  Register
+                  <div>Register</div>
+                  <div>Register</div>
+                  <div>Register</div>
+                  <div>Register</div>
+                </div>
+              </Link>
+              <Link to="/login" className="links">
+              <div className="deconstructed">
+                  Log in
+                  <div>Log in</div>
+                  <div>Log in</div>
+                  <div>Log in</div>
+                  <div>Log in</div>
+                </div>
+              </Link> 
           </Menu>
         </div>
       )
