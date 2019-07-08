@@ -31,9 +31,9 @@ export default class Menu extends React.Component {
           transition: 'height 0.3s ease',
           zIndex: 2,
         },
-        // menuList: {
-        //   paddingTop: '3rem',
-        // }
+        menuList: {
+          paddingTop: '3rem',
+        }
       }
       return(
         <div style={styles.container}>
