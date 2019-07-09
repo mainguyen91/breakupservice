@@ -1,0 +1,19 @@
+.view-order{
+    color: white;
+}
+
+.order-header{
+    margin-top: 2em;
+}
+
+.cancel-order{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 2em;
+}
+
+.paypal{
+    margin-top: 5em;
+    margin-bottom: 2em;
+}

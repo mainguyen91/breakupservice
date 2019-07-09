@@ -28,7 +28,7 @@ class LoggedNavbar extends Component {
             opacity: 0.9,
             display:'flex',
             alignItems:'center',
-            background: '#FAEFD1',
+            background: '#6b0a0a',
             width: '100%',
           },
           body: {

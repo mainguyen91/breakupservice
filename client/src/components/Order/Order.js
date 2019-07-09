@@ -21,7 +21,6 @@ class Order extends Component {
         this.setState({ [e.target.name]: e.target.value }) //name is the input tag for "name" in the form
     }
 
-    //function that listens for the submit event on form
     handleSubmit = e => {
         e.preventDefault();
         const order = {
@@ -64,7 +63,7 @@ class Order extends Component {
                             <label className="input-label">Your name:</label>
                             <br />
                             <input
-                                placeholder="Your name as known by STBE"
+                                placeholder="Your name as known by soon-to-be-ex"
                                 type="text"
                                 name="nameClient"
                                 value={this.state.nameClient}
@@ -89,6 +88,7 @@ class Order extends Component {
                         <div className="input-block">
                             <label className="input-label">Service:</label>
                             <br />
+                            <div className="custom-select">
                             <select
                                 type="text"
                                 name="service"
@@ -101,12 +101,13 @@ class Order extends Component {
                                 <option value="email">Email 10 euro</option>
                                 <option value="phone">Phone 30 euro</option>
                             </select>
+                            </div>
                         </div>
                         <div className="input-block">
                             <label className="input-label">Contact details:</label>
                             <br />
                             <input
-                                placeholder="The contact info of your STBE"
+                                placeholder="The contact info of your soon-to-be-ex"
                                 type="text"
                                 name="contactSo"
                                 value={this.state.contactSo}
@@ -132,7 +133,7 @@ class Order extends Component {
                             <label className="input-label">Message:</label>
                             <br />
                             <input
-                                placeholder="This field is not required"
+                                placeholder="This field is not required; share whatever you need"
                                 type="text"
                                 name="message"
                                 value={this.state.message}

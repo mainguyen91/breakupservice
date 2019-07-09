@@ -1,10 +1,10 @@
-.about{
+/* .about{
     background-image: url('../../public/img/pattern2.jpg');
     background-repeat: repeat;
-}
+} */
 
 .main {
-    padding: 2em;
+    padding: 0 2em;
     min-height: 100vh;
     display: flex;
     flex-direction: row;
@@ -15,13 +15,18 @@
   .center{
     font-family: 'Lora', serif;
     max-width: 700px;
-    background-color: rgba(241, 179, 71, 0.9);
-    color: rgb(70, 51, 41);
+    /* background-color: rgba(241, 179, 71, 0.9); */
+    color:white;
     line-height: 40px;
-    padding:10px;
+    padding:0 10px;
+    text-align: justify;
   }
 
   .us{
     height: auto;
     width: 40%;
   }
+/* 
+  .story-header{
+    margin-top: 1.5em;
+  } */

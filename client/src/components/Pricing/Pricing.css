@@ -1,4 +1,49 @@
 .pricing{
-    background-image: url('../../public/img/pattern2.jpg');
-    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
 }
+
+.main-pricing{
+    width: 70%;
+  	padding-top: 50px;
+	margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.price{
+    color: black;
+}
+
+.email{
+    background-color: white;
+    width: 100%;
+    max-width: 300px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+    line-height: 35px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px;
+}
+.phone{
+    background-color: white;
+    width: 100%;
+    max-width: 300px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+    line-height: 35px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px;
+}
+
+.price-plan{
+    padding: 20px;
+}
+
+
+
+

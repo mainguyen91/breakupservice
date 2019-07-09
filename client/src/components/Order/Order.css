@@ -66,4 +66,11 @@ input {
 }
 .input-label {
     color: rgba(#8c7569, 0.8);
+}
+select {
+    color: #fff;
+    background: #8c7569;
+    cursor: pointer;
+    padding: 8px 12px;
   }
+  
