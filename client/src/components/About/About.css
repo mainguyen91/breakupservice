@@ -1,32 +1,26 @@
-/* .about{
-    background-image: url('../../public/img/pattern2.jpg');
-    background-repeat: repeat;
-} */
-
 .main {
     padding: 0 2em;
-    min-height: 100vh;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   
   .center{
-    font-family: 'Lora', serif;
+    font-family: 'Ubuntu', sans-serif;
     max-width: 700px;
-    /* background-color: rgba(241, 179, 71, 0.9); */
     color:white;
     line-height: 40px;
     padding:0 10px;
     text-align: justify;
+    font-size: 18px;
   }
 
   .us{
     height: auto;
     width: 40%;
   }
-/* 
+
   .story-header{
-    margin-top: 1.5em;
-  } */
+    margin: 2.5em;
+  }

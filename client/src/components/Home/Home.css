@@ -3,6 +3,7 @@ body, html{
     margin: auto;
     text-align: center;
     background-color: #6b0a0a;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -59,7 +60,6 @@ h3 {
 
 @media screen and (min-width: 768px) {
     .hero-text {     
-        /* background-color: rgba(127,39,12, 0.7); Black w/opacity/see-through */
         font-weight: bold;
         position: absolute;
         top: 90%;

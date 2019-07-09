@@ -7,7 +7,7 @@ const About = () => {
     return (
         <div className="about">
             <Navbar />
-            {/* <h1 className="story-header">Our story</h1> */}
+            <h1 className="story-header">Our story</h1>
             <div className="main">
                 <img className="us" src={us} alt="two women" />
                 <p className="center">Sitting at the coffee table and discussing the world's oldest problem which is love, 

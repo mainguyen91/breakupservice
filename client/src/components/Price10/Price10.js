@@ -15,6 +15,7 @@ export default class Price10 extends Component {
                 <p className="paypal">Please pay 10 euro with the PayPal button below:</p>
                 <Payment10 />
                 <Link to="/cancel"><p className="cancel-order">Cancel this order</p></Link>
+                <p className="appendix">&#42;STBE - "soon to be ex"</p>
                 </div>
             </div>
         )

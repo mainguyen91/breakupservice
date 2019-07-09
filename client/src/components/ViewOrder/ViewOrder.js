@@ -24,11 +24,11 @@ export default class ViewOrder extends Component {
             <div>
                 <LoggedNavbar />
                 <div className="view-order">
-                    <h1 className="order-header">Thank you for placing the order. This is an overview of your order:</h1>
-                    <p>Your name as known by your STBE: {this.state.orders.nameClient}</p>
-                    <p>Name of your STBE: {this.state.orders.nameSo}</p>
-                    <p>Break-up method: {this.state.orders.service}</p>
-                    <p>Contact details of your STBE: {this.state.orders.contactSo}</p>
+                    <h1 className="order-header">Thank you for placing the order. This is the overview:</h1>
+                    <p className="order-details">Your name as known by your STBE: <span className="details">{this.state.orders.nameClient}</span></p>
+                    <p className="order-details">Name of your STBE: <span className="details">{this.state.orders.nameSo}</span></p>
+                    <p className="order-details">Break-up method: <span className="details">{this.state.orders.service}</span></p>
+                    <p className="order-details">Contact details of your STBE: <span className="details">{this.state.orders.contactSo}</span></p>
                 </div>
             </div>
         )
