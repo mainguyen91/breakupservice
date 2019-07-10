@@ -29,7 +29,7 @@ class Navbar extends Component {
             display:'flex',
             alignItems:'center',
             // background: '#7f270c',
-            background: '#FAEFD1',
+            background: '#6b0a0a',
             width: '100%',
           },
           body: {

@@ -2,7 +2,8 @@ body, html{
     height: 100%;
     margin: auto;
     text-align: center;
-    background-color: #FAEFD1;
+    background-color: #6b0a0a;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -24,7 +25,8 @@ body, html{
 h1{
     font-size: 36px;
     margin-top: 4em;
-    color: rgb(99, 72, 57);
+    /* color: rgb(99, 72, 57); */
+    color: white;
 }
 
 h3 {
@@ -32,8 +34,7 @@ h3 {
     margin: 1em;
     font-size: 25px;
     letter-spacing: 3px;
-    /* color: rgb(218, 168, 32); */
-    color: rgb(99, 72, 57);
+    color: white;
 }
 
 
@@ -59,7 +60,6 @@ h3 {
 
 @media screen and (min-width: 768px) {
     .hero-text {     
-        /* background-color: rgba(127,39,12, 0.7); Black w/opacity/see-through */
         font-weight: bold;
         position: absolute;
         top: 90%;

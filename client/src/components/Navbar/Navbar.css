@@ -1,15 +1,11 @@
 .links{
     text-decoration: none;
-    color: rgb(99, 72, 57);
+    font-family: 'Merriweather', serif;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
     line-height: 85px;
     font-size: 45px;
-  
-}
-
-.links:hover {
-  color:#c38430;
   
 }
 
@@ -31,7 +27,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  color: rgb(99, 72, 57);
+  /* color: rgb(99, 72, 57); */
+  color: white;
   pointer-events: none;
 }
 

@@ -13,6 +13,7 @@ import Logout from './components/Logout/Logout';
 import ViewOrder from './components/ViewOrder/ViewOrder';
 import AllOrders from './components/AllOrders/AllOrders';
 import OrderSuccess from './components/OrderSuccess/OrderSuccess';
+import Cancel from './components/Cancel/Cancel'
 
 class App extends Component {
 
@@ -32,6 +33,7 @@ class App extends Component {
           <Route path="/logout" component={Logout} />
           <Route path="/viewallorders" component={AllOrders} />
           <Route path="/ordersuccess" component={OrderSuccess} />
+          <Route path="/cancel" component={Cancel} />
         </Switch>
       </div>
     );

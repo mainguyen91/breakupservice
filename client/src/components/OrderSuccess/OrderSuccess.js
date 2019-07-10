@@ -3,7 +3,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import AllOrders from '../AllOrders/AllOrders';
 import LoggedNavbar from '../LoggedNavbar/LoggedNavbar';
 
-export default class Pricing extends Component {
+export default class OrderSuccess extends Component {
     render() {
         return (
             <div>
