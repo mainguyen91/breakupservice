@@ -7,10 +7,9 @@
 .order-container{
     margin: 5em 0;
     height: 100%;
-    width: 50%;
+    width: 60%;
     background-image: url('../../public/img/zebra.jpg');
-    /* position: absolute; */
-    border-radius: 10px;
+       border-radius: 10px;
 }
 
 .form-header{

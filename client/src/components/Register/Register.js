@@ -50,51 +50,54 @@ class Register extends Component {
             <div className="register">
                 <Navbar />
                 <div className="parent-container">
-                <div className="register-container">    
-                <h1 className="form-header">Create account</h1>
-                <div className="register-form">
-                <form className="form" onSubmit={this.handleSubmit}>
-                    <div className="input-block">
-                        <label className="input-label">Name:</label>
-                        <br />
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            value={this.state.name}
-                            onChange={this.handleChange}
-                            required
-                        />
+                    <div className="register-container">
+                        <h1 className="form-header">Create account</h1>
+                        <div className="register-form">
+                            <form className="form" onSubmit={this.handleSubmit}>
+                                <div className="input-block">
+                                    <label className="input-label">Name:</label>
+                                    <br />
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Name"
+                                        autoComplete="off"
+                                        value={this.state.name}
+                                        onChange={this.handleChange}
+                                        required
+                                    />
+                                </div>
+                                <div className="input-block">
+                                    <label className="input-label">Email:</label>
+                                    <br />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Email"
+                                        autoComplete="off"
+                                        value={this.state.email}
+                                        onChange={this.handleChange}
+                                        required
+                                    />
+                                </div>
+                                <div className="input-block">
+                                    <label className="input-label">Password:</label>
+                                    <br />
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        placeholder="Password"
+                                        autoComplete="off"
+                                        value={this.state.password}
+                                        onChange={this.handleChange}
+                                        required
+                                    />
+                                </div>
+                                <br />
+                                <input className="submit-button" type="submit" value="Submit" />
+                            </form>
+                        </div>
                     </div>
-                    <div className="input-block">
-                        <label className="input-label">Email:</label>
-                        <br />
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="input-block">
-                        <label className="input-label">Password:</label>
-                        <br />
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                            required
-                        />
-                    </div>
-                    <br />
-                    <input className="submit-button" type="submit" value="Submit" />
-                </form>
-                </div>
-                </div>
                 </div>
             </div>
         )

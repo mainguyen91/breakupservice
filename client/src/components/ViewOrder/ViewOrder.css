@@ -5,7 +5,7 @@
 }
 
 .order-header{
-    margin-top: 2.5em;
+    margin-top: 15vh;
 }
 
 .cancel-order{
@@ -23,15 +23,20 @@
 }
 
 .appendix{
-    margin: 60px;
+    margin: 7vh;
     color: grey;
 }
 .order-details{
-    font-size: 18px;
-    margin: 2em;
+    font-size: 15px;
+    margin: 1em;
+    color: white;
 }
 .details{
     text-transform: capitalize;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.bold {
+    font-size: 22px;
     font-weight: bold;
 }
