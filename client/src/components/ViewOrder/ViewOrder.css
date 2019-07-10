@@ -1,0 +1,37 @@
+.view-order{
+    color: white;
+    letter-spacing: 3px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.order-header{
+    margin-top: 2.5em;
+}
+
+.cancel-order{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 3em;
+}
+
+.paypal{
+    margin-top: 5em;
+    margin-bottom: 2em;
+    font-weight: bold;
+}
+
+.appendix{
+    margin: 60px;
+    color: grey;
+}
+.order-details{
+    font-size: 18px;
+    margin: 2em;
+}
+.details{
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: bold;
+}
