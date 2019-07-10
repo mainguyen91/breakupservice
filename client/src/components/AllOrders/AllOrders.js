@@ -38,8 +38,6 @@ export default class AllOrders extends Component {
                 <LoggedNavbar />
                 <h1 className="order-header">Thank you for using our service. This is an overview of ALL orders:</h1>
                 {finalOrder}
-
-
             </div>
         )
     }

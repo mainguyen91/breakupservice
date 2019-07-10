@@ -18,7 +18,7 @@ class Order extends Component {
         }
     }
     handleChange = e => {
-        this.setState({ [e.target.name]: e.target.value }) //name is the input tag for "name" in the form
+        this.setState({ [e.target.name]: e.target.value })
     }
 
     handleSubmit = e => {

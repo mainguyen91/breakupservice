@@ -6,7 +6,6 @@
     font-weight: bold;
     line-height: 85px;
     font-size: 45px;
-  
 }
 
 .deconstructed {
@@ -16,9 +15,6 @@
   color: transparent;
   font-weight: 700;
   letter-spacing: -0.02em;
-  /* line-height: 1em; */
-  
-  
 }
 
 .deconstructed > div {

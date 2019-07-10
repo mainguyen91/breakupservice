@@ -15,10 +15,9 @@ class Register extends Component {
         }
     }
     handleChange = e => {
-        this.setState({ [e.target.name]: e.target.value }) //name is the input tag for "name" in the form
+        this.setState({ [e.target.name]: e.target.value })
     }
 
-    //function that listens for the submit event on form
     handleSubmit = e => {
         e.preventDefault()
         const user = {
@@ -29,7 +28,6 @@ class Register extends Component {
         axios
             .post('register', user)
             .then(results => {
-                //set state for Form.js with results from the server to be sent to App.js (React)
                 this.setState({
                     id: results.data.id,
                     name: results.data.name,
@@ -40,8 +38,6 @@ class Register extends Component {
 
             })
             .catch(error => console.error(`Something went wrong when posting user ${error.stack}`))
-
-
     }
 
     render() {
